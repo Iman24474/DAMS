@@ -4,10 +4,12 @@ import com.cs5800.dams.entity.User;
 import com.cs5800.dams.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 @Controller
 public class AdminController {
@@ -20,25 +22,26 @@ public class AdminController {
         return "AdminDash";
     }
 
-    @GetMapping("/AdminDash")
+    @GetMapping("admin_dash")
     public String adminDash()
     {
         return "AdminDash";
     }
 
-    @GetMapping("/ManageAccounts")
-    public String manageAccounts()
+    @GetMapping("/manage_accounts")
+    public ModelAndView manageAccounts()
     {
-        return "ManageAccounts";
+        List<User> list = userService.getAllUsers();
+        return new ModelAndView("ManageAccounts", "user", list);
     }
 
-    @GetMapping("CreateAccounts")
+    @GetMapping("create_accounts")
     public String createAccounts()
     {
         return "CreateAccounts";
     }
 
-    @GetMapping("/ManageDonations")
+    @GetMapping("manage_donations")
     public String manageDonations()
     {
         return "ManageDonations";
@@ -48,6 +51,12 @@ public class AdminController {
     public String addUser(@ModelAttribute User user)
     {
         userService.save(user);
-        return "redirect:/ManageAccounts";
+        return "redirect:/manage_accounts";
+    }
+
+    @GetMapping("edit_accounts")
+    public String editAccounts()
+    {
+        return "EditAccounts";
     }
 }

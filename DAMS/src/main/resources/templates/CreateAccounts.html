@@ -12,7 +12,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand text-white" href="AdminDash">Admin Dashboard</a>
+        <a class="navbar-brand text-white" href="admin_dash">Admin Dashboard</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,16 +22,16 @@
                     <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="ManageAccounts" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-white" href="manage_accounts" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Accounts
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="CreateAccounts">Create New Account</a></li>
-                        <li><a class="dropdown-item" href="ManageAccounts">Manage Accounts</a></li>
+                        <li><a class="dropdown-item" href="create_accounts">Create New Account</a></li>
+                        <li><a class="dropdown-item" href="manage_accounts">Manage Accounts</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ManageDonations">Manage Donations</a>
+                    <a class="nav-link text-white" href="manage_donations">Donations</a>
                 </li>
             </ul>
         </div>
@@ -42,7 +42,7 @@
     <form class="col-md-4 offset-md-4" th:action="@{/Save}" method="post">
         <div class="mb-3">
             <label class="form-label">First Name</label>
-            <input type="text" class="form-control" name="firstname">
+            <input type="text" class="form-control" name="firstName">
         </div>
         <div class="mb-3">
             <label class="form-label">Last Name</label>
@@ -75,6 +75,10 @@
         <div class="mb-3">
             <label class="form-label">Zip Code</label>
             <input type="number" class="form-control" name="zipCode">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Role</label>
+            <input type="text" class="form-control" name="role">
         </div>
         <center><button type="submit" class="btn btn-primary">Submit</button></center>
     </form>

@@ -17,10 +17,11 @@ public class User {
     private String username;
     private String password;
     private String address;
+    private String city;
     private String state;
     private int zipCode;
 
-    public User(int id, String role, String firstName, String lastName, String email, String username, String password, String address, String state, int zipCode) {
+    public User(int id, String role, String firstName, String lastName, String email, String username, String password, String address, String city, String state, int zipCode) {
         this.id = id;
         this.role = role;
         this.firstName = firstName;
@@ -29,8 +30,10 @@ public class User {
         this.username = username;
         this.password = password;
         this.address = address;
+        this.city = city;
         this.state = state;
         this.zipCode = zipCode;
+
     }
 
     public User() {
@@ -114,5 +117,13 @@ public class User {
 
     public void setZipCode(int zipCode) {
         this.zipCode = zipCode;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }
