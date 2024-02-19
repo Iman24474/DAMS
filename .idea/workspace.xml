@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08861b48-b81a-48ce-985c-9288804b2b80" name="Changes" comment="" />
+    <list default="true" id="9404f62d-24f7-4bfa-b98f-ffc59d124f58" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/DAMS.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/DAMS/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DAMS/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/DAMS/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/DAMS/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DAMS/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/main/java/com/cs5800/dams/DamsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/DAMS/src/main/java/com/cs5800/dams/DamsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/main/java/com/cs5800/dams/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/main/java/com/cs5800/dams/adminUser/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/main/java/com/cs5800/dams/adminUser/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/main/java/com/cs5800/dams/adminUser/UserNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/main/java/com/cs5800/dams/adminUser/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/main/java/com/cs5800/dams/adminUser/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DAMS/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/main/resources/templates/accounts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/main/resources/templates/user_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAMS/src/test/java/com/cs5800/dams/DamsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/DAMS/src/test/java/com/cs5800/dams/DamsApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +37,7 @@
   "customColor": "",
   "associatedIndex": 1
 }]]></component>
-  <component name="ProjectId" id="2cXjSLm0tZqL6oVV3nGdnMHZxkK" />
+  <component name="ProjectId" id="2cYsK5KeMe9klP9fnPw0miUA3GI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,12 +62,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="08861b48-b81a-48ce-985c-9288804b2b80" name="Changes" comment="" />
-      <created>1708264816467</created>
+      <changelist id="9404f62d-24f7-4bfa-b98f-ffc59d124f58" name="Changes" comment="" />
+      <created>1708299781173</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1708264816467</updated>
-      <workItem from="1708264817686" duration="80000" />
+      <updated>1708299781173</updated>
+      <workItem from="1708299782313" duration="56000" />
     </task>
     <servers />
   </component>
