@@ -47,7 +47,7 @@
     <h4 class="text-center">Create New Donation</h4>
     <form class="col-md-4 offset-md-4" th:action="@{/saveDonation}" method="post">
         <div class="mb-3">
-            <label class="form-label">Username</label>
+            <label class="form-label">Username*</label>
             <input type="text" class="form-control" name="username">
         </div>
         <div class="mb-3">
@@ -55,12 +55,11 @@
             <input type="email" class="form-control" name="email">
         </div>
         <div class="mb-3">
-            <label class="form-label">Zip Code</label>
+            <label class="form-label">Zip Code*</label>
             <input type="number" class="form-control" name="zipCode">
         </div>
         <div class="mb-3">
-            <label class="form-label">Category <div id="guide2" class="form-text">Choose from the list...</div></label>
-
+            <label class="form-label">Category* <div id="guide2" class="form-text">Choose from the list...</div></label>
             <select class="form-select" aria-label="Default select example" name="category">
                 <option value = "Cash">Cash / Voucher Assistance</option>
                 <option value = "Clothing">Clothing / Personal Hygiene</option>
@@ -71,7 +70,7 @@
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label">Item</label>
+            <label class="form-label">Item*</label>
             <input type="text" class="form-control" name="item">
         </div>
         <div class="mb-3">

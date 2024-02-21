@@ -55,15 +55,15 @@
             <input type="text" class="form-control" name="lastName">
         </div>
         <div class="mb-3">
-            <label class="form-label">E-mail</label>
+            <label class="form-label">E-mail*</label>
             <input type="email" class="form-control" name="email">
         </div>
         <div class="mb-3">
-            <label class="form-label">Username</label>
+            <label class="form-label">Username*</label>
             <input type="text" class="form-control" name="username">
         </div>
         <div class="mb-3">
-            <label class="form-label">Password</label>
+            <label class="form-label">Password*</label>
             <input type="text" class="form-control" name="password">
         </div>
         <div class="mb-3">
@@ -79,12 +79,16 @@
             <input type="text" class="form-control" name="state">
         </div>
         <div class="mb-3">
-            <label class="form-label">Zip Code</label>
+            <label class="form-label">Zip Code*</label>
             <input type="number" class="form-control" name="zipCode">
         </div>
         <div class="mb-3">
-            <label class="form-label">Role</label>
-            <input type="text" class="form-control" name="role">
+            <label class="form-label">Role* <div id="guide" class="form-text">Choose from the list...</div></label>
+            <select class="form-select" aria-label="Default select example" name="role">
+                <option value = "Admin">Admin</option>
+                <option value = "Donor">Donor</option>
+                <option value = "Receiver">Receiver</option>
+            </select>
         </div>
         <center><button type="submit" class="btn btn-primary">Submit</button></center>
     </form>

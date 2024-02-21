@@ -1,9 +1,6 @@
 package com.cs5800.dams.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class User {
@@ -13,12 +10,16 @@ public class User {
     private String role;
     private String firstName;
     private String lastName;
+    @Column(nullable = false, unique = true)
     private String email;
+    @Column(nullable = false, unique = true)
     private String username;
+    @Column(nullable = false)
     private String password;
     private String address;
     private String city;
     private String state;
+    @Column(nullable = false)
     private int zipCode;
 
     public User(int id, String role, String firstName, String lastName, String email, String username, String password, String address, String city, String state, int zipCode) {

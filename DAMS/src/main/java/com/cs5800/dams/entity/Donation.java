@@ -1,9 +1,6 @@
 package com.cs5800.dams.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Donation {
@@ -11,11 +8,15 @@ public class Donation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(nullable = false)
     private String username;
     private String email;
+    @Column(nullable = false)
     private String category;
+    @Column(nullable = false)
     private String item;
     private int quantity;
+    @Column(nullable = false)
     private int zipCode;
 
     public Donation(int id, String username, String email, String category, String item, int quantity,  int zipCode) {

@@ -21,4 +21,9 @@ public class DonationService {
     {
         return donationRepository.findAll();
     }
+
+    public void deleteById(int id)
+    {
+        donationRepository.deleteById(id);
+    }
 }

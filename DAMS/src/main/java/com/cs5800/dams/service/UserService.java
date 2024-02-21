@@ -21,4 +21,14 @@ public class UserService {
     {
         return userRepository.findAll();
     }
+
+    public void deleteById(int id)
+    {
+        userRepository.deleteById(id);
+    }
+
+    public User getUserById(int id)
+    {
+        return userRepository.findById(id).get();
+    }
 }

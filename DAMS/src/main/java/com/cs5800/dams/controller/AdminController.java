@@ -6,9 +6,8 @@ import com.cs5800.dams.service.DonationService;
 import com.cs5800.dams.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -56,9 +55,18 @@ public class AdminController {
         return "redirect:/manage_accounts";
     }
 
-    @GetMapping("edit_accounts")
-    public String editAccounts()
+    @RequestMapping("/deleteUser/{id}")
+    public String deleteUser(@PathVariable("id") int id)
     {
+        userService.deleteById(id);
+        return ("redirect:/manage_accounts");
+    }
+
+    @RequestMapping("/editUser/{id}")
+    public String editAccounts(@PathVariable("id") int id, Model model)
+    {
+        User temp = userService.getUserById(id);
+        model.addAttribute("tempUser", temp);
         return "Admin/Accounts/EditAccounts";
     }
 
@@ -81,6 +89,13 @@ public class AdminController {
     public String addDonation(@ModelAttribute Donation donation)
     {
         donationService.save(donation);
+        return "redirect:/manage_donations";
+    }
+
+    @RequestMapping("/deleteDonation/{id}")
+    public String deleteDonation(@PathVariable("id") int id)
+    {
+        donationService.deleteById(id);
         return "redirect:/manage_donations";
     }
 }
