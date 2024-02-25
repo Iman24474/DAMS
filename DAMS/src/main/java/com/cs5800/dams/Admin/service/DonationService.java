@@ -1,7 +1,7 @@
-package com.cs5800.dams.service;
+package com.cs5800.dams.Admin.service;
 
-import com.cs5800.dams.entity.Donation;
-import com.cs5800.dams.repository.DonationRepository;
+import com.cs5800.dams.Admin.entity.Donation;
+import com.cs5800.dams.Admin.repository.DonationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

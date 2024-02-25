@@ -45,7 +45,14 @@
 </nav>
 <div class="container my-5 p-5" style="border:1px solid black;">
     <h4 class="text-center">Edit Account Here</h4>
-    <form class="col-md-4 offset-md-4" th:action="@{/saveUser}" method="post" th:object="${tempUser}">
+    <div th:if="${error}" class="alert alert-danger" role="alert">
+        <span th:text="${error}"></span>
+    </div>
+    <form class="col-md-4 offset-md-4" th:action="@{/updateUser/{id}(id=${tempUser.id})}" method="post" th:object="${tempUser}" >
+        <div>
+            <p>* indicates a required field</p>
+        </div>
+
         <input type="hidden" name="id" th:value="${tempUser.id}"/>
         <div class="mb-3">
             <label class="form-label">First Name</label>
@@ -56,12 +63,12 @@
             <input type="text" class="form-control" name="lastName" th:value="${tempUser.lastName}">
         </div>
         <div class="mb-3">
-            <label class="form-label">E-mail*</label>
-            <input type="email" class="form-control" name="email" th:value="${tempUser.email}">
+            <label class="form-label">E-mail *</label>
+            <input type="email" class="form-control" name="email" th:value="${tempUser.email}" required>
         </div>
         <div class="mb-3">
-            <label class="form-label">Username*</label>
-            <input type="text" class="form-control" name="username" th:value="${tempUser.username}">
+            <label class="form-label">Username *</label>
+            <input type="text" class="form-control" name="username" th:value="${tempUser.username}" required>
         </div>
         <input type="hidden" name="password" th:value="${tempUser.password}"/>
         
@@ -78,18 +85,19 @@
             <input type="text" class="form-control" name="state" th:value="${tempUser.state}">
         </div>
         <div class="mb-3">
-            <label class="form-label">Zip Code*</label>
-            <input type="number" class="form-control" name="zipCode" th:value="${tempUser.zipCode}">
+            <label class="form-label">Zip Code *</label>
+            <input type="number" class="form-control" name="zipCode" th:value="${tempUser.zipCode}" required>
         </div>
         <div class="mb-3">
-            <label class="form-label">Role* <div id="guide" class="form-text">Choose from the list...</div></label>
-            <select class="form-select" aria-label="Default select example" name="role" th:value="${tempUser.role}">
+            <label class="form-label">Role * </label>
+            <select class="form-select" aria-label="Default select example" name="role" th:value="${tempUser.role}" required>
+                <option value="" disabled selected>Select an option</option>
                 <option value = "Admin">Admin</option>
                 <option value = "Donor">Donor</option>
                 <option value = "Receiver">Receiver</option>
             </select>
         </div>
-        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+        <center><button type="submit" class="btn btn-primary">Update</button></center>
     </form>
 
 </div>

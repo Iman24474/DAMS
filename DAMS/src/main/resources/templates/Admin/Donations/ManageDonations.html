@@ -71,7 +71,7 @@
             <td th:text="${d.category}"></td>
             <td th:text="${d.item}"></td>
             <td th:text="${d.quantity}"></td>
-            <td><a class="btn btn-danger btn-sm" th:href="@{/deleteDonation/{id}(id=${d.id})}">Remove</a>
+            <td>
 <!--                <a style="color:blue" th:href="@{/editBook/{id}(id=${b.id})}"><i class="fa-solid fa-pen-to-square ms-4"></i></a>-->
                 <a style="color:red" th:href="@{/deleteDonation/{id}(id=${d.id})}"><i class="fa-solid fa-trash ms-4"></i></a>
             </td>

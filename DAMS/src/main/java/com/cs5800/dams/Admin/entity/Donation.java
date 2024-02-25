@@ -1,4 +1,4 @@
-package com.cs5800.dams.entity;
+package com.cs5800.dams.Admin.entity;
 
 import jakarta.persistence.*;
 

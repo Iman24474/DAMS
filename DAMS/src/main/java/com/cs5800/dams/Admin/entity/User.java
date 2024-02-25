@@ -1,4 +1,4 @@
-package com.cs5800.dams.entity;
+package com.cs5800.dams.Admin.entity;
 
 import jakarta.persistence.*;
 
@@ -21,6 +21,7 @@ public class User {
     private String state;
     @Column(nullable = false)
     private int zipCode;
+
 
     public User(int id, String role, String firstName, String lastName, String email, String username, String password, String address, String city, String state, int zipCode) {
         this.id = id;
@@ -127,4 +128,5 @@ public class User {
     public void setCity(String city) {
         this.city = city;
     }
+
 }

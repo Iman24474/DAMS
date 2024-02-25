@@ -46,32 +46,39 @@
 <div class="container my-5 p-5" style="border:1px solid black;">
     <h4 class="text-center">Create New Donation</h4>
     <form class="col-md-4 offset-md-4" th:action="@{/saveDonation}" method="post">
+        <div>
+            <p class="text-center">* indicates a required field</p>
+        </div>
         <div class="mb-3">
-            <label class="form-label">Username*</label>
-            <input type="text" class="form-control" name="username">
+            <label class="form-label">Username *</label>
+            <input type="text" class="form-control" name="username" required>
         </div>
         <div class="mb-3">
             <label class="form-label">E-mail</label>
             <input type="email" class="form-control" name="email">
         </div>
         <div class="mb-3">
-            <label class="form-label">Zip Code*</label>
-            <input type="number" class="form-control" name="zipCode">
+            <label class="form-label">Zip Code *</label>
+            <input type="number" class="form-control" name="zipCode" required>
         </div>
         <div class="mb-3">
-            <label class="form-label">Category* <div id="guide2" class="form-text">Choose from the list...</div></label>
-            <select class="form-select" aria-label="Default select example" name="category">
+            <label class="form-label">Category * </label>
+            <select class="form-select" aria-label="Default select example" name="category" required>
+                <option value="" disabled selected>Select an option</option>
                 <option value = "Cash">Cash / Voucher Assistance</option>
                 <option value = "Clothing">Clothing / Personal Hygiene</option>
                 <option value = "Nutrition">Food / Nutrition</option>
                 <option value = "Medical">Medical / Healthcare</option>
                 <option value = "Shelter">Shelter</option>
                 <option value = "Other">Other</option>
+
             </select>
+
         </div>
+
         <div class="mb-3">
             <label class="form-label">Item*</label>
-            <input type="text" class="form-control" name="item">
+            <input type="text" class="form-control" name="item" required>
         </div>
         <div class="mb-3">
             <label class="form-label">Quantity</label>
